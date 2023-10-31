@@ -37,7 +37,22 @@ mod_DNA_Expression_ui <- function(id){
 mod_DNA_Expression_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-
+    dna <- reactiveVal()
+    output$DNA <- renderUI({
+      textAreaInput(
+        inputId = ns("dna_length"),
+        label = "DNA sequence",
+        placeholder = "Insert DNA sequence",
+        value = dna(),
+        height = 100,
+        width = 600
+      )
+    })
+    observeEvent(input$generate_dna, {
+      dna(
+        cDogma::randomDNASeq(input$dna_length)
+      )
+    })
   })
 }
 
