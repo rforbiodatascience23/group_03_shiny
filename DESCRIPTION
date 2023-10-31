@@ -1,7 +1,7 @@
 Package: cDogmaApp
 Title: PKG_TITLE
 Version: 0.0.0.9000
-Authors@R:c(
+Authors@R: c(
     person("Johanne", "Overgaard", , "jobao@dtu.dk", role = c("aut", "cre")),
     person("Anne", "Skov", role = "aut"),
     person("Rebecca", "Grenov", , "kibecco@live.dk", role = "aut"),

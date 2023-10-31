@@ -53,6 +53,20 @@ mod_DNA_Expression_server <- function(id){
         cDogma::randomDNASeq(input$dna_length)
       )
     })
+    output$peptide <- renderText({
+      # Ensure input is not NULL and is longer than 2 characters
+      if(is.null(input$DNA)){
+        NULL
+      } else if(nchar(input$DNA) < 3){
+        NULL
+      } else{
+        input$DNA |>
+          toupper() |>
+          cDogma::dnaToRna() |>
+          cDogma::seqToCodon() |>
+          cDogma::codonsToAA()
+      }
+    })
   })
 }
 
