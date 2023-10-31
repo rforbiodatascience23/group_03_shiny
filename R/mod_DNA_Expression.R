@@ -40,7 +40,7 @@ mod_DNA_Expression_server <- function(id){
     dna <- reactiveVal()
     output$DNA <- renderUI({
       textAreaInput(
-        inputId = ns("dna_length"),
+        inputId = ns("DNA"),
         label = "DNA sequence",
         placeholder = "Insert DNA sequence",
         value = dna(),
