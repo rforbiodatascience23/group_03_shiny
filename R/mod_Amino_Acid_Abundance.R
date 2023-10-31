@@ -1,4 +1,4 @@
-#' DNA Expression UI Function
+#' Amino_Acid_Abundance UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -7,17 +7,17 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
-mod_DNA Expression_ui <- function(id){
+mod_Amino_Acid_Abundance_ui <- function(id){
   ns <- NS(id)
   tagList(
  
   )
 }
     
-#' DNA Expression Server Functions
+#' Amino_Acid_Abundance Server Functions
 #'
 #' @noRd 
-mod_DNA Expression_server <- function(id){
+mod_Amino_Acid_Abundance_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
  
@@ -25,7 +25,7 @@ mod_DNA Expression_server <- function(id){
 }
     
 ## To be copied in the UI
-# mod_DNA Expression_ui("DNA Expression_1")
+# mod_Amino_Acid_Abundance_ui("Amino_Acid_Abundance_1")
     
 ## To be copied in the server
-# mod_DNA Expression_server("DNA Expression_1")
+# mod_Amino_Acid_Abundance_server("Amino_Acid_Abundance_1")
