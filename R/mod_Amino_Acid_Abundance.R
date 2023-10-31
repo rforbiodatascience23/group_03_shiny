@@ -35,6 +35,15 @@ mod_Amino_Acid_Abundance_ui <- function(id){
 mod_Amino_Acid_Abundance_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
+    output$abundance <- renderPlot({
+      if(input$peptide == ""){
+        NULL
+      } else{
+        input$peptide |>
+          cDogma::plotFreqAA() +
+          ggplot2::theme(legend.position = "none")
+      }
+    })
 
   })
 }
