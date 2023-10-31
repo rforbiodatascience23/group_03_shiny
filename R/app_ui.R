@@ -12,10 +12,10 @@ app_ui <- function(request) {
     fluidPage(
       h1("cDogmaApp"),
       tabsetPanel(
-        tabPanel(title = "panel1",
-                 "module1"),
-        tabPanel(title = "panel2",
-                 "module2")
+        tabPanel(title = "DNA Expression",
+                 mod_DNA_Expression_ui("DNA_Expression_1")),
+        tabPanel(title = "Amino Acid Abundance",
+                 mod_Amino_Acid_Abundance_ui("Amino_Acid_Abundance_1"))
       )
     )
   )
