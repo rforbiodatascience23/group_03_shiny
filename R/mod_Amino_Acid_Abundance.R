@@ -32,6 +32,8 @@ mod_Amino_Acid_Abundance_ui <- function(id){
 #' Amino_Acid_Abundance Server Functions
 #'
 #' @noRd
+#' @importFrom ggplot2 theme
+#' @import cDogma
 mod_Amino_Acid_Abundance_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
